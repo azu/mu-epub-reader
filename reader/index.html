@@ -19,6 +19,12 @@
         }
     </style>
     <script src="js/libs/jquery.min.js"></script>
+    <script>
+        // electron hack
+        if (typeof jQuery === "undefined") {
+            window.jQuery = window.$ = require('./js/libs/jquery.min.js');
+        }
+    </script>
 
     <script src="js/libs/zip.min.js"></script>
 
@@ -49,12 +55,10 @@
 
     <script>
         window.googleTranslateElementInit = function googleTranslateElementInit() {
-            console.log("googleTranslateElementInit");
             new google.translate.TranslateElement(
                 {
-                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                     autoDisplay: true,
-                    multilanguagePage: false,
+                    multilanguagePage: true,
                 }, 'google_translate_element');
         };
         window.addEventListener("load", () => {
@@ -68,6 +72,7 @@
             });
         });
     </script>
+
 
     <!-- Plugins -->
     <!-- <script src="js/plugins/search.js"></script> -->
@@ -116,6 +121,7 @@
             <span id="chapter-title"></span>
         </div>
         <div id="title-controls">
+            <div id="google_translate_element"></div>
             <a id="translate" class="icon-globe">T</a>
             <a id="bookmark" class="icon-bookmark-empty">Bookmark</a>
             <a id="setting" class="icon-cog">Settings</a>

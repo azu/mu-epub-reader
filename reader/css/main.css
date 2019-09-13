@@ -219,6 +219,14 @@ body {
   float: right;
 }
 
+#google_translate_element{
+  height: 19px;
+  overflow: hidden;
+  display: inline-block;
+  opacity: .5;
+  padding: 4px;
+  border-radius: 4px;
+}
 #panels a {
   visibility: hidden;
   width: 18px;

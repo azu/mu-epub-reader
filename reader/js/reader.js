@@ -3437,19 +3437,24 @@ EPUBJS.Reader.prototype.adjustFontSize = function (e) {
 
     if (MOD && e.keyCode == PLUS) {
         e.preventDefault();
-        this.book.setStyle("fontSize", (fontSize + interval) + "%");
+        const size = (fontSize + interval) + "%";
+        this.settings.styles.fontSize = size;
+        this.rendition.themes.fontSize(size);
 
     }
 
     if (MOD && e.keyCode == MINUS) {
-
         e.preventDefault();
-        this.book.setStyle("fontSize", (fontSize - interval) + "%");
+        const size = (fontSize - interval) + "%";
+        this.settings.styles.fontSize = size;
+        this.rendition.themes.fontSize(size);
     }
 
     if (MOD && e.keyCode == ZERO) {
         e.preventDefault();
-        this.book.setStyle("fontSize", "100%");
+        const size = "100%";
+        this.settings.styles.fontSize = size;
+        this.rendition.themes.fontSize(size);
     }
 };
 

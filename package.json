@@ -1,21 +1,47 @@
 {
-  "name": "epubjs-reader",
+  "name": "mu-epub-viewer",
   "version": "0.3.0",
   "repository": "https://github.com/futurepress/epubjs-reader",
   "description": "ePub.js Reader",
-  "main": "reader/js/reader.js",
+  "main": "index.js",
+  "bin": {
+    "mu-pdf-viewer": "./bin/cmd.js"
+  },
+  "build": {
+    "productName": "mu-epub-viewer",
+    "appId": "info.efcl.mu-epub-viewer",
+    "asar": true,
+    "npmRebuild": false,
+    "files": [
+      "index.js",
+      "reader/**/*",
+      "bin/**/*",
+      "node_modules/**/*"
+    ],
+    "publish": [
+      {
+        "provider": "github"
+      }
+    ]
+  },
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "start": "node tools/serve",
-    "deploy": "./node_modules/.bin/gh-pages -d reader"
+    "server": "node tools/serve",
+    "start": "electron .",
+    "deploy": "./node_modules/.bin/gh-pages -d reader",
+    "electron": "electron index.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "author": "fchasen@gmail.com",
   "license": "BSD-2-Clause",
   "devDependencies": {
     "colors": "~1.2.5",
     "connect": "~3.6.6",
+    "electron": "^6.0.9",
+    "electron-builder": "^21.2.0",
     "express": "^4.16.3",
     "gh-pages": "^1.1.0",
     "grunt": "~1.0.2",
@@ -30,6 +56,8 @@
     "portfinder": "~1.0.13"
   },
   "dependencies": {
+    "electron-default-menu": "^1.0.1",
+    "electron-window-state": "^5.0.3",
     "epubjs": "latest",
     "jquery": "^3.3.1",
     "jszip": "^3.1.5",

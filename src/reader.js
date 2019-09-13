@@ -60,11 +60,16 @@ EPUBJS.Reader = function(bookPath, _options) {
 		this.applySavedSettings();
 	}
 
-	this.settings.styles = this.settings.styles || {
-		fontSize : "100%"
-	};
+	this.settings.styles = {
+        fontSize: "100%",
+        manager: "continuous",
+        flow: "scrolled",
+        width: "100%",
+        height: "100%"
+    };
 
 	this.book = book = new ePub(this.settings.bookPath, this.settings);
+
 
 	this.offline = false;
 	this.sidebarOpen = false;

@@ -30,8 +30,8 @@ Download app from artifacts and Install it.
 
 Build electron app
 
-    npm install
-    npm run dist
+    yarn install
+    yarn run dist
     # output .app to dist/
 
 ## Related

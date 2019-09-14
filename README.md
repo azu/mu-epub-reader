@@ -17,7 +17,7 @@ This application is forked of [futurepress/epubjs-reader: Epub.js Reader](https:
 ![en](./docs/img/en.png)
 ![ja](./docs/img/ja.png)
 
-> Quote from <https://www.computer-networking.info/1st/html/index.html>
+> Quote from <https://book.systemsapproach.org/>
 
 ## Usage
 

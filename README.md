@@ -19,6 +19,14 @@ This application is forked of [futurepress/epubjs-reader: Epub.js Reader](https:
 
 > Quote from <https://www.oreilly.com/programming/free/open-by-design.csp>
 
+## Usage
+
+1. Click *File* > *Open File* 
+2. Select epub file
+3. View epub
+
+![menu](./docs/img/menu.png)
+
 ## Installation
 
 Download app from artifacts and Install it.

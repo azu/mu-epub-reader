@@ -3,10 +3,8 @@ const {
     app,
     shell,
     Menu,
-    globalShortcut,
-    ipcMain,
-    clipboard,
-    BrowserWindow
+    BrowserWindow,
+    dialog
 } = require("electron");
 const path = require("path");
 const windowStateKeeper = require('electron-window-state');
@@ -25,6 +23,20 @@ const openURL = (URL) => {
     }
 };
 let mainWindow = null;
+
+// ファイル選択ダイアログを開く
+function openFile() {
+    dialog.showOpenDialog({ properties: ['openFile'] }, (filePath) => {
+        openHTML(filePath);
+    })
+}
+const openHTML = (filePath) => {
+    const query = qs.stringify({
+        bookPath: filePath
+    });
+    mainWindow.loadURL('file://' + __dirname + '/reader/index.html?' + query);
+};
+
 app.on('ready', function () {
     const mainWindowState = windowStateKeeper({
         defaultWidth: 1000,
@@ -40,12 +52,6 @@ app.on('ready', function () {
     mainWindow.webContents.on('new-window', function (e) {
         openURL(e.url);
     });
-    const openHTML = (filePath) => {
-        const query = qs.stringify({
-            bookPath: filePath
-        });
-        mainWindow.loadURL('file://' + __dirname + '/reader/index.html?' + query);
-    };
     if (argv._ && argv._.length > 0) {
         const filePath = path.resolve(process.cwd(), argv._[0]);
         openHTML(filePath);
@@ -86,6 +92,13 @@ app.on('ready', function () {
         {
             label: 'File',
             submenu: [
+                {
+                    label: 'Open File',
+                    accelerator: 'CmdOrCtrl+O',
+                    click: () => {
+                        openFile()
+                    }
+                },
                 isMac ? { role: 'close' } : { role: 'quit' }
             ]
         },

@@ -6,7 +6,7 @@ This application is forked of [futurepress/epubjs-reader: Epub.js Reader](https:
 
 ## Differences
 
-- Integrate Google Translation
+- Integrate with Google Translation
 - Scroll Shortcuts: 
     - <kbd>j</kbd> or <kbd>Space</kbd>: Scroll down
     - <kbd>k</kbd> or <kbd>Shift+Space</kbd>: Scroll up

@@ -1,4 +1,4 @@
-name: Node CD
+name: Electron CD
 
 on: [push]
 
@@ -30,8 +30,9 @@ jobs:
         run: |
           yarn run dist
         env:
-          CI: true
+#          CI: true
           GITHUB_CI_REF: ${{ github.ref }}
+#          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #          CSC_LINK: ${{ secrets.CSC_LINK }}
 #          CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
 #          WIN_CSC_LINK: ${{ secrets.WIN_CSC_LINK }}

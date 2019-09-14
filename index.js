@@ -30,6 +30,7 @@ function openFile() {
         openHTML(filePath);
     })
 }
+
 const openHTML = (filePath) => {
     const query = qs.stringify({
         bookPath: filePath
@@ -49,8 +50,9 @@ app.on('ready', function () {
         'height': mainWindowState.height
     });
     mainWindowState.manage(mainWindow);
-    mainWindow.webContents.on('new-window', function (e) {
-        openURL(e.url);
+    mainWindow.webContents.on('new-window', function (event, url) {
+        event.preventDefault();
+        openURL(url);
     });
     if (argv._ && argv._.length > 0) {
         const filePath = path.resolve(process.cwd(), argv._[0]);

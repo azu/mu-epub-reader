@@ -1,6 +1,6 @@
 # mu-epub-reader
 
-Epub viewer using Electron.
+Epub viewer on Electron.
 
 This application is forked of [futurepress/epubjs-reader: Epub.js Reader](https://github.com/futurepress/epubjs-reader).
 

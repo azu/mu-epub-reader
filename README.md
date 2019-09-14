@@ -13,6 +13,11 @@ This application is forked of [futurepress/epubjs-reader: Epub.js Reader](https:
 - One column mode: continuous scroll like PDF
 - Open file with arguments
 
+![en](./docs/img/en.png)
+![ja](./docs/img/ja.png)
+
+> Quote from <https://www.oreilly.com/programming/free/open-by-design.csp>
+
 ## Installation
 
 Download app from artifacts and Install it.

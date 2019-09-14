@@ -32,18 +32,13 @@ jobs:
         env:
           CI: true
           GITHUB_CI_REF: ${{ github.ref }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #          CSC_LINK: ${{ secrets.CSC_LINK }}
 #          CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
 #          WIN_CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
 #          WIN_CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
-      - name: Update release notes
-        if: contains(github.ref, '/tags/')
-        run: |
-          npm run gh-release
-        env:
-          GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Cleanup artifacts
+        if: contains(github.ref, '/tags/')
         run: |
           npx rimraf "dist/!(*.exe|*.deb|*.AppImage|*.dmg)"
       - name: Upload artifacts

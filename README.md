@@ -4,7 +4,7 @@ Epub viewer using Electron.
 
 This application is forked of [futurepress/epubjs-reader: Epub.js Reader](https://github.com/futurepress/epubjs-reader).
 
-## Differences
+## Features
 
 - Integrate with Google Translation
 - Scroll Shortcuts: 

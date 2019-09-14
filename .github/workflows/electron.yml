@@ -23,16 +23,15 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: npm install
+      - name: yarn install
         run: |
-          npm ci
+          yarn install
       - name: Publish
         run: |
-          npm run dist
+          yarn run dist
         env:
           CI: true
           GITHUB_CI_REF: ${{ github.ref }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #          CSC_LINK: ${{ secrets.CSC_LINK }}
 #          CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
 #          WIN_CSC_LINK: ${{ secrets.WIN_CSC_LINK }}

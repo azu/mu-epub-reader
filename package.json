@@ -28,7 +28,7 @@
   "scripts": {
     "server": "node tools/serve",
     "start": "electron .",
-    "deploy": "./node_modules/.bin/gh-pages -d reader",
+    "deploy": "gh-pages -d reader",
     "electron": "electron index.js",
     "pack": "electron-builder --dir",
     "dist": "electron-builder"

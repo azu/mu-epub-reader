@@ -3731,25 +3731,24 @@ EPUBJS.reader.ControlsController = function (book) {
         }
     });
 
-    if (typeof screenfull !== 'undefined') {
-        $fullscreen.on("click", function () {
-            screenfull.toggle($('#container')[0]);
-        });
-        if (screenfull.raw) {
-            document.addEventListener(screenfull.raw.fullscreenchange, function () {
-                fullscreen = screenfull.isFullscreen;
-                if (fullscreen) {
-                    $fullscreen
-                        .addClass("icon-resize-small")
-                        .removeClass("icon-resize-full");
-                } else {
-                    $fullscreen
-                        .addClass("icon-resize-full")
-                        .removeClass("icon-resize-small");
-                }
-            });
+    $fullscreen.on("click", function () {
+        if (!document.fullscreenElement) {
+            document.querySelector("#main").requestFullscreen();
+        } else {
+            document.exitFullscreen();
         }
-    }
+    });
+    document.addEventListener("fullscreenchange", function () {
+        if (document.fullscreenElement) {
+            $fullscreen
+                .addClass("icon-resize-small")
+                .removeClass("icon-resize-full");
+        } else {
+            $fullscreen
+                .addClass("icon-resize-full")
+                .removeClass("icon-resize-small");
+        }
+    });
 
     $settings.on("click", function () {
         reader.SettingsController.show();

@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 					'sourceRoot': '../'
 				},
       	files: {
-					'reader/js/reader.js': ['<banner>', 'node_modules/rsvp/dist/rsvp.js', 'src/core.js',  'src/reader.js', 'src/controllers/*.js'],
+					'reader/js/reader.js': ['<banner>', 'src/core.js',  'src/reader.js', 'src/controllers/*.js'],
 				}
 			}
 		},
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 						sourceMap: false
 				},
 				files: {
-					'reader/js/reader.min.js': ['<banner>', 'node_modules/rsvp/dist/rsvp.js', 'src/core.js', 'src/reader.js', 'src/controllers/*.js'],
+					'reader/js/reader.min.js': ['<banner>', 'src/core.js', 'src/reader.js', 'src/controllers/*.js'],
 				}
 			}
 		},
@@ -34,7 +34,6 @@ module.exports = function(grunt) {
 					{src: 'node_modules/localforage/dist/localforage.min.js', dest: 'reader/js/libs/localforage.min.js'},
 					{src: 'libs/jszip/jszip.min.js', dest: 'reader/js/libs/zip.min.js'},
 					{src: 'node_modules/jquery/dist/jquery.min.js', dest:'reader/js/libs/jquery.min.js'},
-				  {src: 'node_modules/screenfull/dist/screenfull.js', dest: 'reader/js/libs/screenfull.js'},
 					{src: 'src/plugins/search.js', dest: 'reader/js/plugins/search.js'},
 					{src: 'src/plugins/hypothesis.js', dest: 'reader/js/plugins/hypothesis.js'},
 					{src: 'hooks/extensions/highlight.js', dest: 'reader/js/hooks/extensions/highlight.js'},

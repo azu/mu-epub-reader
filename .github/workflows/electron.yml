@@ -38,7 +38,6 @@ jobs:
 #          WIN_CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
 #          WIN_CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
       - name: Cleanup artifacts
-        if: contains(github.ref, '/tags/')
         run: |
           npx rimraf "dist/!(*.exe|*.deb|*.AppImage|*.dmg)"
       - name: Upload artifacts

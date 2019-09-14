@@ -6,6 +6,7 @@ This application is forked of [futurepress/epubjs-reader: Epub.js Reader](https:
 
 ## Features
 
+- Standalone Electron app
 - Integrate with Google Translation
 - Scroll Shortcuts: 
     - <kbd>j</kbd> or <kbd>Space</kbd>: Scroll down

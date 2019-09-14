@@ -27,6 +27,11 @@ This application is forked of [futurepress/epubjs-reader: Epub.js Reader](https:
 
 ![menu](./docs/img/menu.png)
 
+or
+
+1. Open epub file with mu-epub-reader
+2. View epub
+
 ## Installation
 
 Download app from artifacts and Install it.

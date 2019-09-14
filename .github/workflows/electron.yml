@@ -29,14 +29,6 @@ jobs:
       - name: Publish
         run: |
           yarn run dist
-        env:
-#          CI: true
-          GITHUB_CI_REF: ${{ github.ref }}
-#          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          CSC_LINK: ${{ secrets.CSC_LINK }}
-#          CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
-#          WIN_CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
-#          WIN_CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
       - name: Cleanup artifacts
         run: |
           npx rimraf "dist/!(*.exe|*.deb|*.AppImage|*.dmg)"
@@ -45,3 +37,8 @@ jobs:
         with:
           name: ${{ matrix.os }}
           path: dist
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

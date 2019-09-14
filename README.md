@@ -13,6 +13,12 @@ This application is forked of [futurepress/epubjs-reader: Epub.js Reader](https:
 - One column mode: continuous scroll like PDF
 - Open file with arguments
 
+## Installation
+
+Download app from artifacts and Install it.
+
+:memo: This app is not signed. So, it will appear warning about un-signed app.
+
 ## Development
 
 Build electron app

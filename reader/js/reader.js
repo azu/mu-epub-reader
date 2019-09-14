@@ -4170,16 +4170,16 @@ EPUBJS.reader.ReaderController = function (book) {
         // Shift+space
         if ((e.shiftKey && e.keyCode === 32) || e.key === "k") {
             if (book.package.metadata.direction === "rtl") {
-                rendition.manager.scrollBy(0, ScrollDelta, true)
+                rendition.manager.scrollBy(0, ScrollDelta)
             } else {
-                rendition.manager.scrollBy(0, -ScrollDelta, true);
+                rendition.manager.scrollBy(0, -ScrollDelta);
             }
             e.preventDefault();
         } else if (e.keyCode === 32 || e.key === "j") { // space
             if (book.package.metadata.direction === "rtl") {
-                rendition.manager.scrollBy(0, -ScrollDelta, true)
+                rendition.manager.scrollBy(0, -ScrollDelta)
             } else {
-                rendition.manager.scrollBy(0, ScrollDelta, true);
+                rendition.manager.scrollBy(0, ScrollDelta);
             }
             e.preventDefault();
         }

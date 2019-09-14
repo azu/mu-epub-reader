@@ -38,7 +38,7 @@ Download app from artifacts and Install it.
 
 - [Download from Latest Release](https://github.com/azu/mu-epub-reader/releases/latest)
 
-:memo: This app is not signed. So, it will appear warning about un-signed app.
+:warning: This app is not signed. So, it will appear warning about un-signed app.
 
 ## Development
 

@@ -24,9 +24,6 @@
       }
     ]
   },
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {
     "server": "node tools/serve",
     "start": "electron .",
@@ -58,10 +55,11 @@
   "dependencies": {
     "electron-default-menu": "^1.0.1",
     "electron-window-state": "^5.0.3",
-    "epubjs": "latest",
+    "epubjs": "^0.3.85",
     "jquery": "^3.3.1",
     "jszip": "^3.1.5",
     "localforage": "^1.2.10",
+    "minimist": "^1.2.0",
     "rsvp": "^4.8.2",
     "screenfull": "^3.3.2"
   }

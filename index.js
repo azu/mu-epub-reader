@@ -28,22 +28,15 @@ let mainWindow = null;
 app.on('ready', function () {
     const mainWindowState = windowStateKeeper({
         defaultWidth: 1000,
-        defaultHeight: 800,
-        webPreferences: {
-            nodeIntegration: false,
-            webSecurity: false,
-        }
+        defaultHeight: 800
     });
     mainWindow = new BrowserWindow({
         'x': mainWindowState.x,
         'y': mainWindowState.y,
         'width': mainWindowState.width,
-        'height': mainWindowState.height,
-        webPreferences: {
-            nodeIntegration: true,
-            webSecurity: false,
-        }
+        'height': mainWindowState.height
     });
+    mainWindowState.manage(mainWindow);
     mainWindow.webContents.on('new-window', function (e) {
         openURL(e.url);
     });

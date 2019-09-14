@@ -4166,8 +4166,27 @@ EPUBJS.reader.ReaderController = function (book) {
 
     var keylock = false;
 
+    const ScrollDelta = 100;
     var arrowKeys = function (e) {
-        if (e.keyCode == 37) {
+        // Shift+space
+        if ((e.shiftKey && e.keyCode === 32) || e.key === "k") {
+            if (book.package.metadata.direction === "rtl") {
+                rendition.manager.scrollBy(0, ScrollDelta, true)
+            } else {
+                rendition.manager.scrollBy(0, -ScrollDelta, true);
+            }
+            e.preventDefault();
+        } else if (e.keyCode === 32 || e.key === "j") { // space
+            if (book.package.metadata.direction === "rtl") {
+                rendition.manager.scrollBy(0, -ScrollDelta, true)
+            } else {
+                rendition.manager.scrollBy(0, ScrollDelta, true);
+            }
+            e.preventDefault();
+        }
+
+
+        if (e.keyCode === 37) {
 
             if (book.package.metadata.direction === "rtl") {
                 rendition.next();
@@ -4185,7 +4204,26 @@ EPUBJS.reader.ReaderController = function (book) {
 
             e.preventDefault();
         }
-        if (e.keyCode == 39) {
+
+        if (e.keyCode === 37) {
+
+            if (book.package.metadata.direction === "rtl") {
+                rendition.next();
+            } else {
+                rendition.prev();
+            }
+
+            $prev.addClass("active");
+
+            keylock = true;
+            setTimeout(function () {
+                keylock = false;
+                $prev.removeClass("active");
+            }, 100);
+
+            e.preventDefault();
+        }
+        if (e.keyCode === 39) {
 
             if (book.package.metadata.direction === "rtl") {
                 rendition.prev();

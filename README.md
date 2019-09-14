@@ -31,6 +31,8 @@ Build electron app
 
 ## Related
 
+- [azu/mu-pdf-viewer: PDF viewer on electron.](https://github.com/azu/mu-pdf-viewer)
+    - PDF Viewer
 - [Epub.js](http://futurepress.github.com/epub.js/) library
 
 

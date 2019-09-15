@@ -18,6 +18,13 @@
       "bin/**/*",
       "node_modules/**/*"
     ],
+    "fileAssociations": {
+      "ext": [
+        "epub"
+      ],
+      "name": "mu-epub-reader",
+      "role": "Viewer"
+    },
     "publish": [
       {
         "provider": "github",

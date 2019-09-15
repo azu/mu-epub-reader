@@ -4149,27 +4149,30 @@ EPUBJS.reader.ReaderController = function (book) {
     var keylock = false;
 
     const ScrollDelta = 100;
-    var arrowKeys = function (e) {
+    var arrowKeys = function (event) {
+        const hasMod = event.getModifierState("Shift")||
+            event.getModifierState("Control") ||
+            event.getModifierState("Alt") ||
+            event.getModifierState("Meta");
         // Shift+space
-        if ((e.shiftKey && e.keyCode === 32) || e.key === "k") {
+        if ((event.shiftKey && event.keyCode === 32) || event.key === "k") {
             if (book.package.metadata.direction === "rtl") {
                 rendition.manager.scrollBy(0, ScrollDelta)
             } else {
                 rendition.manager.scrollBy(0, -ScrollDelta);
             }
-            e.preventDefault();
-        } else if (e.keyCode === 32 || e.key === "j") { // space
+            event.preventDefault();
+        } else if (event.keyCode === 32 || event.key === "j") { // space
             if (book.package.metadata.direction === "rtl") {
                 rendition.manager.scrollBy(0, -ScrollDelta)
             } else {
                 rendition.manager.scrollBy(0, ScrollDelta);
             }
-            e.preventDefault();
+            event.preventDefault();
         }
 
 
-        if (e.keyCode === 37) {
-
+        if (!hasMod && event.key === "ArrowLeft") {
             if (book.package.metadata.direction === "rtl") {
                 rendition.next();
             } else {
@@ -4184,29 +4187,9 @@ EPUBJS.reader.ReaderController = function (book) {
                 $prev.removeClass("active");
             }, 100);
 
-            e.preventDefault();
+            event.preventDefault();
         }
-
-        if (e.keyCode === 37) {
-
-            if (book.package.metadata.direction === "rtl") {
-                rendition.next();
-            } else {
-                rendition.prev();
-            }
-
-            $prev.addClass("active");
-
-            keylock = true;
-            setTimeout(function () {
-                keylock = false;
-                $prev.removeClass("active");
-            }, 100);
-
-            e.preventDefault();
-        }
-        if (e.keyCode === 39) {
-
+        if (!hasMod && event.key === "ArrowRight") {
             if (book.package.metadata.direction === "rtl") {
                 rendition.prev();
             } else {
@@ -4221,9 +4204,9 @@ EPUBJS.reader.ReaderController = function (book) {
                 $next.removeClass("active");
             }, 100);
 
-            e.preventDefault();
+            event.preventDefault();
         }
-    }
+    };
 
     document.addEventListener('keydown', arrowKeys, false);
 

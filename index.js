@@ -6,6 +6,7 @@ const {
     BrowserWindow,
     dialog
 } = require("electron");
+const fs = require("fs");
 const path = require("path");
 const windowStateKeeper = require('electron-window-state');
 const defaultMenu = require('electron-default-menu');
@@ -32,7 +33,7 @@ function openFile() {
 }
 
 const openHTML = (filePath) => {
-    const canLoadOverride = !!process.env.MU_OVERRIDE;
+    const canLoadOverride = fs.existsSync(path.join(__dirname, "reader/override.js"));
     const query = qs.stringify({
         bookPath: filePath,
         // load override.js

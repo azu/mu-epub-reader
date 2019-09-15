@@ -52,9 +52,11 @@ Build electron app
     yarn run dist
     # output .app to dist/
 
-Load reader/override.js for custom your logic.
+Load `reader/override.js` if exits.
 
-    yarn run dist:local
+1. Put custom logic script to `reader/override.js`
+2. Restart app
+3. mu-epub-reader load `reader/override.js` in renderer process.
 
 `override.js` example: modify request url
 
@@ -63,7 +65,7 @@ const origOpen = XMLHttpRequest.prototype.open;
 XMLHttpRequest.prototype.open = function (...args) {
     const originalURL = args[1];
     const url = new URL(originalURL);
-    /// hack someting...
+    /// hack something...
     args[1] = url.toString();
     origOpen.apply(this, args);
 };

@@ -8,9 +8,13 @@ This application is forked of [futurepress/epubjs-reader: Epub.js Reader](https:
 
 - Standalone Electron app
 - Integrate with Google Translation
-- Scroll Shortcuts: 
+- Shortcuts: 
     - <kbd>j</kbd> or <kbd>Space</kbd>: Scroll down
     - <kbd>k</kbd> or <kbd>Shift+Space</kbd>: Scroll up
+    - <kbd>Cmd+o</kbd>: Open file
+    - <kbd>Cmd+^</kbd>: Increase font size
+    - <kbd>Cmd+-</kbd>: Decrease font size
+    - <kbd>Cmd+0</kbd>: Reset font size
 - One column mode: continuous scroll like PDF
 - Open file with arguments
 

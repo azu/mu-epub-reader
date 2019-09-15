@@ -22,7 +22,7 @@
       "ext": "epub",
       "name": "mu-epub-reader",
       "role": "Viewer",
-      "mimeType": "application/xhtml+xml "
+      "mimeType": "application/xhtml+xml"
     },
     "publish": [
       {

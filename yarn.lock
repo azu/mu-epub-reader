@@ -123,26 +123,26 @@ ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-app-builder-bin@3.4.2:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/app-builder-bin/-/app-builder-bin-3.4.2.tgz#4684003fb319d8bc154b1b6e9ce006bba1602fa9"
-  integrity sha512-E9VvUrZm60oLl0rvLw/ErvZiEOIHkulZbJ9C9TWMD4ftNrkXFc2+a5JGlD19Bwvj329d4qz91zs/hWD01q18TQ==
+app-builder-bin@3.4.3:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/app-builder-bin/-/app-builder-bin-3.4.3.tgz#58a74193eb882f029be6b7f0cd3f0c6805927a6b"
+  integrity sha512-qMhayIwi3juerQEVJMQ76trObEbfQT0nhUdxZz9a26/3NLT3pE6awmQ8S1cEnrGugaaM5gYqR8OElcDezfmEsg==
 
-app-builder-lib@21.1.6, app-builder-lib@~21.1.6:
-  version "21.1.6"
-  resolved "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-21.1.6.tgz#25db48342ba4a512b9d4cff447319b59115b35a2"
-  integrity sha512-SNahybyQkFRFxi6OloKo5CndBq5SsqsaU6cPJAqt78abYCwUhxfpX63ajB1NdhwaEQaBG9OVshuOFgqLB7tE1g==
+app-builder-lib@21.2.0, app-builder-lib@~21.2.0:
+  version "21.2.0"
+  resolved "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-21.2.0.tgz#fa1d1604601431e2c3476857e9b9b61d33ad26cc"
+  integrity sha512-aOX/nv77/Bti6NymJDg7p9T067xD8m1ipIEJR7B4Mm1GsJWpMm9PZdXtCRiMNRjHtQS5KIljT0g17781y6qn5A==
   dependencies:
     "7zip-bin" "~5.0.3"
     "@develar/schema-utils" "~2.1.0"
     async-exit-hook "^2.0.1"
     bluebird-lst "^1.0.9"
-    builder-util "21.1.6"
+    builder-util "21.2.0"
     builder-util-runtime "8.3.0"
     chromium-pickle-js "^0.2.0"
     debug "^4.1.1"
     ejs "^2.6.2"
-    electron-publish "21.1.6"
+    electron-publish "21.2.0"
     fs-extra "^8.1.0"
     hosted-git-info "^2.7.1"
     is-ci "^2.0.0"
@@ -333,14 +333,14 @@ builder-util-runtime@8.3.0:
     debug "^4.1.1"
     sax "^1.2.4"
 
-builder-util@21.1.6, builder-util@~21.1.6:
-  version "21.1.6"
-  resolved "https://registry.yarnpkg.com/builder-util/-/builder-util-21.1.6.tgz#4c36ee24280d4cbde0ac314e5a5dd37e520a4fab"
-  integrity sha512-iff0hrUq1wVvOEr87Tg6mhnzD0ItsTxAn3D/Q/imCjWtOegDRV93VSB8A8xLdjYdkCcACvmPr3FJyIhyUP8nRA==
+builder-util@21.2.0, builder-util@~21.2.0:
+  version "21.2.0"
+  resolved "https://registry.yarnpkg.com/builder-util/-/builder-util-21.2.0.tgz#aba721190e4e841009d9fb4b88f1130ed616522f"
+  integrity sha512-Nd6CUb6YgDY8EXAXEIegx+1kzKqyFQ5ZM5BoYkeunAlwz/zDJoH1UCyULjoS5wQe5czNClFQy07zz2bzYD0Z4A==
   dependencies:
     "7zip-bin" "~5.0.3"
     "@types/debug" "^4.1.4"
-    app-builder-bin "3.4.2"
+    app-builder-bin "3.4.3"
     bluebird-lst "^1.0.9"
     builder-util-runtime "8.3.0"
     chalk "^2.4.2"
@@ -348,7 +348,7 @@ builder-util@21.1.6, builder-util@~21.1.6:
     fs-extra "^8.1.0"
     is-ci "^2.0.0"
     js-yaml "^3.13.1"
-    source-map-support "^0.5.12"
+    source-map-support "^0.5.13"
     stat-mode "^0.3.0"
     temp-file "^3.3.4"
 
@@ -694,14 +694,14 @@ destroy@~1.0.4:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
-dmg-builder@21.1.6:
-  version "21.1.6"
-  resolved "https://registry.yarnpkg.com/dmg-builder/-/dmg-builder-21.1.6.tgz#c62ef8f84d56508b70b81cd9f69b8c6b31c768ab"
-  integrity sha512-PM/UXlVMOz2iI3aAfKO0cRH7pqpAuWh7H/k3kM4SpCieEmIuDpuFMLRR0RmiZGQ3KKIY6rCIa2AECVMSNNT+iw==
+dmg-builder@21.2.0:
+  version "21.2.0"
+  resolved "https://registry.yarnpkg.com/dmg-builder/-/dmg-builder-21.2.0.tgz#a9c883557cacb9abdb66c7133b30fe921c1a3ba7"
+  integrity sha512-9cJEclnGy7EyKFCoHDYDf54pub/t92CQapyiUxU0w9Bj2vUvfoDagP1PMiX4XD5rPp96141h9A+QN0OB4VgvQg==
   dependencies:
-    app-builder-lib "~21.1.6"
+    app-builder-lib "~21.2.0"
     bluebird-lst "^1.0.9"
-    builder-util "~21.1.6"
+    builder-util "~21.2.0"
     fs-extra "^8.1.0"
     iconv-lite "^0.5.0"
     js-yaml "^3.13.1"
@@ -780,17 +780,17 @@ ejs@^2.6.2:
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.7.1.tgz#5b5ab57f718b79d4aca9254457afecd36fa80228"
   integrity sha512-kS/gEPzZs3Y1rRsbGX4UOSjtP/CeJP0CxSNZHYxGfVM/VgLcv0ZqM7C45YyTj2DI2g7+P9Dd24C+IMIg6D0nYQ==
 
-electron-builder@21.1.6:
-  version "21.1.6"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-21.1.6.tgz#d877e727c1fad977c90cc9bf62493546d0eafca6"
-  integrity sha512-tF9d+afwXkXatSWmf900ilT6jB5C1dxF98G1sSwVZ12MB6Tldw/ECwOSD5N4V/V4EGb+fzntIwt9jgci4Vj1hw==
+electron-builder@21.2.0:
+  version "21.2.0"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-21.2.0.tgz#b68ec4def713fc0b8602654ce842f972432f50c5"
+  integrity sha512-x8EXrqFbAb2L3N22YlGar3dGh8vwptbB3ovo3OF6K7NTpcsmM2zEoJv7GhFyX73rNzSG2HaWpXwGAtOp2JWiEw==
   dependencies:
-    app-builder-lib "21.1.6"
+    app-builder-lib "21.2.0"
     bluebird-lst "^1.0.9"
-    builder-util "21.1.6"
+    builder-util "21.2.0"
     builder-util-runtime "8.3.0"
     chalk "^2.4.2"
-    dmg-builder "21.1.6"
+    dmg-builder "21.2.0"
     fs-extra "^8.1.0"
     is-ci "^2.0.0"
     lazy-val "^1.0.4"
@@ -819,13 +819,13 @@ electron-download@^4.1.0:
     semver "^5.4.1"
     sumchecker "^2.0.2"
 
-electron-publish@21.1.6:
-  version "21.1.6"
-  resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-21.1.6.tgz#aafd5863f791e28cc2f1e0c28e7190650c427717"
-  integrity sha512-JH0fWkMjiHssw4G9IMvAJN4YNV+pV6V92iNqEu2IvDJAs8fkSszcG/uZe/YanR8vUrLugreJE5BOZyjdfiMa9w==
+electron-publish@21.2.0:
+  version "21.2.0"
+  resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-21.2.0.tgz#cc225cb46aa62e74b899f2f7299b396c9802387d"
+  integrity sha512-mWavuoWJe87iaeKd0I24dNWIaR+0yRzshjNVqGyK019H766fsPWl3caQJnVKFaEyrZRP397v4JZVG0e7s16AxA==
   dependencies:
     bluebird-lst "^1.0.9"
-    builder-util "~21.1.6"
+    builder-util "~21.2.0"
     builder-util-runtime "8.3.0"
     chalk "^2.4.2"
     fs-extra "^8.1.0"
@@ -2817,7 +2817,7 @@ sort-keys@^1.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
-source-map-support@^0.5.12:
+source-map-support@^0.5.13:
   version "0.5.13"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.13.tgz#31b24a9c2e73c2de85066c0feb7d44767ed52932"
   integrity sha512-SHSKFHadjVA5oR4PPqhtAVdcBWwRYVd6g6cAXnIbRiIwc2EhPrTuKUBdSLvlEKyIP3GCf89fltvcZiP9MMFA1w==

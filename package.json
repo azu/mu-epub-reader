@@ -19,11 +19,10 @@
       "node_modules/**/*"
     ],
     "fileAssociations": {
-      "ext": [
-        "epub"
-      ],
+      "ext": "epub",
       "name": "mu-epub-reader",
-      "role": "Viewer"
+      "role": "Viewer",
+      "mimeType": "application/xhtml+xml "
     },
     "publish": [
       {
@@ -38,8 +37,7 @@
     "deploy": "gh-pages -d reader",
     "electron": "electron index.js",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder",
-    "dist:local": "MU_OVERRIDE=1 electron-builder"
+    "dist": "electron-builder"
   },
   "author": "fchasen@gmail.com",
   "license": "BSD-2-Clause",

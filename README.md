@@ -52,6 +52,23 @@ Build electron app
     yarn run dist
     # output .app to dist/
 
+Load reader/override.js for custom your logic.
+
+    yarn run dist:local
+
+`override.js` example: modify request url
+
+```js
+const origOpen = XMLHttpRequest.prototype.open;
+XMLHttpRequest.prototype.open = function (...args) {
+    const originalURL = args[1];
+    const url = new URL(originalURL);
+    /// hack someting...
+    args[1] = url.toString();
+    origOpen.apply(this, args);
+};
+```
+
 ## Related
 
 - [azu/mu-pdf-viewer: PDF viewer on electron.](https://github.com/azu/mu-pdf-viewer)

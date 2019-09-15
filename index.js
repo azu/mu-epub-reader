@@ -32,8 +32,11 @@ function openFile() {
 }
 
 const openHTML = (filePath) => {
+    const canLoadOverride = !!process.env.MU_OVERRIDE;
     const query = qs.stringify({
-        bookPath: filePath
+        bookPath: filePath,
+        // load override.js
+        loadOverride: canLoadOverride
     });
     mainWindow.loadURL('file://' + __dirname + '/reader/index.html?' + query);
 };

@@ -3347,23 +3347,6 @@ EPUBJS.Reader = function (bookPath, _options) {
         book.generatePagination($viewer.width(), $viewer.height());
     }
 
-    const DragDrop = Uppy.DragDrop;
-    var uppy = Uppy.Core()
-        .use(DragDrop, {
-            target: "body",
-            width: '100%',
-            height: '100%'
-        });
-    uppy.on('upload', (data) => {
-        // data object consists of `id` with upload ID and `fileIDs` array
-        // with file IDs in current upload
-        // data: { id, fileIDs }
-        console.log(`Starting upload ${id} for files ${fileIDs}`)
-    });
-
-    uppy.on('complete', (result) => {
-        console.log('Upload complete! We’ve uploaded these files:', result.successful)
-    });
     this.rendition = book.renderTo("viewer", {
         ignoreClass: "annotator-hl",
         width: "100%",

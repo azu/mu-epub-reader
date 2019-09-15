@@ -32,7 +32,7 @@
         "use strict";
 
         document.onreadystatechange = function () {
-            if (document.readyState == "complete") {
+            if (document.readyState === "complete") {
                 window.reader = ePubReader("https://s3.amazonaws.com/moby-dick/", {
                     restore: true
                 });
@@ -49,6 +49,20 @@
 
     <!-- Reader -->
     <script src="js/reader.js"></script>
+
+    <script src="https://unpkg.com/xhook@latest/dist/xhook.min.js"></script>
+    <!-- OVERRIDE=1 -->
+    <script>
+        // load override.js
+        // ?loadOverride
+        const url = new URL(location.href);
+        if (url.searchParams.has("loadOverride")) {
+            const script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "override.js";
+            document.head.appendChild(script);
+        }
+    </script>
 
     <script>
         window.googleTranslateElementInit = function googleTranslateElementInit() {
@@ -146,5 +160,4 @@
 </div>
 <div class="overlay"></div>
 </body>
-<script src="https://transloadit.edgly.net/releases/uppy/v1.4.0/uppy.min.js"></script>
 </html>

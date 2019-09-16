@@ -9,6 +9,8 @@ This application is forked of [futurepress/epubjs-reader: Epub.js Reader](https:
 - Standalone Electron app
 - Integrate with Google Translation
 - Shortcuts: 
+    - <kbd>←</kbd>: Prev Page
+    - <kbd>→</kbd>: Next Page
     - <kbd>j</kbd> or <kbd>Space</kbd>: Scroll down
     - <kbd>k</kbd> or <kbd>Shift+Space</kbd>: Scroll up
     - <kbd>Cmd+o</kbd>: Open file

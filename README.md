@@ -62,11 +62,11 @@ Build electron app
     yarn run dist
     # output .app to dist/
 
-Load `reader/override.js` if exits.
+Load `reader/override.js` or [`<AppData>/mu-epub-viewer/override.js`](https://electronjs.org/docs/all#appgetpathname) if exists.
 
 1. Put custom logic script to `reader/override.js`
 2. Restart app
-3. mu-epub-reader load `reader/override.js` in renderer process.
+3. mu-epub-reader preload `reader/override.js` in renderer process.
 
 `override.js` example: modify request url
 

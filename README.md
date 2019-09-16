@@ -49,7 +49,7 @@ Download app and Install it.
 **Web Version**:
 
 - <https://mu-epub-reader.netlify.com/?bookPath=https://mu-epub-reader.netlify.com/example/childrens-literature.epub>
-    - Need to CORS setting for epub file
+    - :warning: Require CORS setting for each epub files
     - :memo: Source: https://github.com/IDPF/epub3-samples/tree/master/30/childrens-literature/EPUB
 
 ## Development

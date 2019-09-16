@@ -44,6 +44,11 @@ Download app from artifacts and Install it.
 
 :warning: This app is not signed. So, it will appear warning about un-signed app.
 
+**Web Version**:
+
+- `https://mu-epub-reader.netlify.com/?bookPath=https://mu-epub-reader.netlify.com/example/childrens-literature.epub`
+    - Need to CORS setting for epub file
+
 ## Development
 
 Build electron app

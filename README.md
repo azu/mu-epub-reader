@@ -48,6 +48,7 @@ Download app from artifacts and Install it.
 
 - <https://mu-epub-reader.netlify.com/?bookPath=https://mu-epub-reader.netlify.com/example/childrens-literature.epub>
     - Need to CORS setting for epub file
+    - :memo: Source: https://github.com/IDPF/epub3-samples/tree/master/30/childrens-literature/EPUB
 
 ## Development
 

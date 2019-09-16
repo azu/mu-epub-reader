@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>mu-epub-reader</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -49,20 +49,6 @@
 
     <!-- Reader -->
     <script src="js/reader.js"></script>
-
-    <script src="https://unpkg.com/xhook@latest/dist/xhook.min.js"></script>
-    <!-- OVERRIDE=1 -->
-    <script>
-        // load override.js
-        // ?loadOverride
-        const url = new URL(location.href);
-        if (url.searchParams.has("loadOverride")) {
-            const script = document.createElement("script");
-            script.type = "text/javascript";
-            script.src = "override.js";
-            document.head.appendChild(script);
-        }
-    </script>
 
     <script>
         window.googleTranslateElementInit = function googleTranslateElementInit() {

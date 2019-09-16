@@ -33,15 +33,21 @@ function openFile() {
 }
 
 const openHTML = (filePath) => {
-    const canLoadOverride = fs.existsSync(path.join(__dirname, "reader/override.js"));
     const query = qs.stringify({
-        bookPath: filePath,
-        // load override.js
-        loadOverride: canLoadOverride
+        bookPath: filePath
     });
     mainWindow.loadURL('file://' + __dirname + '/reader/index.html?' + query);
 };
 
+const getOverrideScript = () => {
+    const configOverride = app.getPath("userData");
+    if (fs.existsSync(path.join(configOverride, "override.js"))) {
+        return path.join(configOverride, "override.js");
+    }
+    if (fs.existsSync(path.join(__dirname, "reader/override.js"))) {
+        return path.join(__dirname, "reader/override.js");
+    }
+};
 app.on('ready', function () {
     const mainWindowState = windowStateKeeper({
         defaultWidth: 1000,
@@ -51,7 +57,10 @@ app.on('ready', function () {
         'x': mainWindowState.x,
         'y': mainWindowState.y,
         'width': mainWindowState.width,
-        'height': mainWindowState.height
+        'height': mainWindowState.height,
+        webPreferences: {
+            preload: getOverrideScript()
+        }
     });
     mainWindowState.manage(mainWindow);
     mainWindow.webContents.on('new-window', function (event, url) {

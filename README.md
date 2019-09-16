@@ -46,7 +46,7 @@ Download app from artifacts and Install it.
 
 **Web Version**:
 
-- `https://mu-epub-reader.netlify.com/?bookPath=https://mu-epub-reader.netlify.com/example/childrens-literature.epub`
+- <https://mu-epub-reader.netlify.com/?bookPath=https://mu-epub-reader.netlify.com/example/childrens-literature.epub>
     - Need to CORS setting for epub file
 
 ## Development

@@ -34,7 +34,7 @@ jobs:
       - name: Cleanup artifacts
         run: |
           npx rimraf 'dist/\!(*.exe|*.deb|*.AppImage|*.dmg)'
-        if: ${{ matrix.os != 'windows-2019'}}
+        if: matrix.os != 'windows-2019'
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:

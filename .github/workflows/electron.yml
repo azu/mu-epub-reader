@@ -36,7 +36,10 @@ jobs:
         with:
           name: ${{ matrix.os }}
           path: |
-            dist/**/*.{exe,.deb,.AppImage,.dmg}
+            dist/**/*.exe
+            dist/**/*.deb
+            dist/**/*.AppImage
+            dist/**/*.dmg}
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')

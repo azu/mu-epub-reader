@@ -765,6 +765,7 @@ EPUBJS.Reader = function (bookPath, _options) {
         reader.SidebarController = EPUBJS.reader.SidebarController.call(reader, book);
         reader.BookmarksController = EPUBJS.reader.BookmarksController.call(reader, book);
         reader.NotesController = EPUBJS.reader.NotesController.call(reader, book);
+
         // location!!
         function setupProgressBar(rendition) {
             // https://github.com/futurepress/epub.js/issues/744#issuecomment-492300092
@@ -799,9 +800,14 @@ EPUBJS.Reader = function (bookPath, _options) {
         setupProgressBar(this.rendition);
         // ~~~
         window.addEventListener("hashchange", this.hashChanged.bind(this), false);
-        document.addEventListener('keydown', this.adjustFontSize.bind(this), {
+        document.addEventListener('keydown', function (event) {
+            this.adjustFontSize.call(this, event)
+            reader.ReaderController.arrowKeys.call(this, event)
+            reader.ReaderController.scrollKeys.call(this, event)
+        }.bind(this), {
             passive: false
         });
+
         this.rendition.on("keydown", this.adjustFontSize.bind(this));
         this.rendition.on("keydown", reader.ReaderController.arrowKeys.bind(this));
         this.rendition.on("keydown", reader.ReaderController.scrollKeys.bind(this));

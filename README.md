@@ -64,6 +64,10 @@ Build electron app
 
 Load `reader/override.js` or [`<AppData>/mu-epub-viewer/override.js`](https://electronjs.org/docs/all#appgetpathname) if exists.
 
+```
+- macOS: ~/Library/Application Support/mu-epub-viewer/override.js
+```
+
 1. Put custom logic script to `reader/override.js`
 2. Restart app
 3. mu-epub-reader preload `reader/override.js` in renderer process.

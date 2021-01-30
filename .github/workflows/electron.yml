@@ -33,7 +33,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Cleanup artifacts
         run: |
-          npx trash-cli "dist/!(*.exe|*.deb|*.AppImage|*.dmg)"
+          npx rimraf 'dist/!(*.exe|*.deb|*.AppImage|*.dmg)'
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:

@@ -16,9 +16,9 @@ let openedFilePath;
 app.once('open-file', function (event, filePath) {
     openedFilePath = filePath;
 });
-const openURL = (URL) => {
+const openURL = async (URL) => {
     if (/^https?:/.test(URL)) {
-        shell.openExternal(URL, {
+        return shell.openExternal(URL, {
             activate: true
         });
     }
@@ -65,7 +65,9 @@ app.on('ready', function () {
     mainWindowState.manage(mainWindow);
     mainWindow.webContents.on('new-window', function (event, url) {
         event.preventDefault();
-        openURL(url);
+        openURL(url).catch(error => {
+            console.error("open url error", error);
+        })
     });
     if (argv._ && argv._.length > 0) {
         const filePath = path.resolve(process.cwd(), argv._[0]);

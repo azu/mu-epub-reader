@@ -74,7 +74,7 @@ EPUBJS.reader.plugins.HypothesisController = function (Book) {
     }).get();
   };
 
-  Book.on("renderer:locationChanged", updateAnnotations);
+  Book.on("relocated", updateAnnotations);
 
   return {}
 };

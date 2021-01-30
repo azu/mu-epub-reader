@@ -19,6 +19,7 @@
         }
     </style>
     <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/rsvp.js"></script>
     <script>
         // electron hack
         if (typeof jQuery === "undefined") {
@@ -130,7 +131,7 @@
     <div id="prev" class="arrow">‹</div>
     <div id="viewer"></div>
     <div id="next" class="arrow">›</div>
-
+    <progress id="progress" value="0" max="1"></progress>
     <div id="loader"><img src="img/loader.gif"></div>
 </div>
 <div class="modal md-effect-1" id="settings-modal">

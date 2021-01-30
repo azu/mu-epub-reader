@@ -33,6 +33,7 @@
   },
   "scripts": {
     "server": "node tools/serve",
+    "build": "grunt",
     "start": "electron .",
     "deploy": "gh-pages -d reader",
     "electron": "electron index.js",
@@ -61,12 +62,12 @@
     "rimraf": "^3.0.0"
   },
   "dependencies": {
-    "electron-default-menu": "^1.0.1",
+    "electron-default-menu": "^1.0.2",
     "electron-window-state": "^5.0.3",
-    "epubjs": "^0.3.85",
-    "jquery": "^3.3.1",
-    "jszip": "^3.1.5",
-    "localforage": "^1.2.10",
-    "minimist": "^1.2.0"
+    "epubjs": "^0.3.88",
+    "jquery": "^3.5.1",
+    "jszip": "^3.5.0",
+    "localforage": "^1.9.0",
+    "minimist": "^1.2.5"
   }
 }

@@ -121,7 +121,6 @@ EPUBJS.Reader = function (bookPath, _options) {
             // Generate location and pagination
             book.ready.then(function () {
                 var stored = localStorage.getItem(book.key() + '-locations');
-                console.log('metadata:', book.package.metadata);
                 if (stored) {
                     return book.locations.load(stored);
                 } else {

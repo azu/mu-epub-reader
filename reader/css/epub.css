@@ -5,3 +5,11 @@ body {
 p {
     line-height: 1.5;
 }
+
+/* Google Translate */
+.goog-text-highlight {
+    background-color: #c9d7f1;
+    box-shadow: 2px 2px 4px #9999aa;
+    box-sizing: border-box;
+    position: relative
+}

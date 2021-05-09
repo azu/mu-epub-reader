@@ -89,7 +89,7 @@ XMLHttpRequest.prototype.open = function (...args) {
 
 - [azu/mu-pdf-viewer: PDF viewer on electron.](https://github.com/azu/mu-pdf-viewer)
     - PDF Viewer
-- [Epub.js](http://futurepress.github.com/epub.js/) library
+- [Epub.js](https://github.com/futurepress/epub.js/) library
 
 
 ## Contributing

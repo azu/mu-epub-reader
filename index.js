@@ -27,8 +27,15 @@ let mainWindow = null;
 
 // ファイル選択ダイアログを開く
 function openFile() {
-    dialog.showOpenDialog({ properties: ['openFile'] }, (filePath) => {
-        openHTML(filePath);
+    return dialog.showOpenDialog({
+        properties: ['openFile'], filters: [
+            { name: 'Epub', extensions: ['epub'] },
+            { name: 'All Files', extensions: ['*'] }
+        ]
+    }).then(result => {
+        if (result.filePaths) {
+            return openHTML(result.filePaths[0]);
+        }
     })
 }
 

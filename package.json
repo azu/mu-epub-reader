@@ -1,6 +1,6 @@
 {
   "name": "mu-epub-viewer",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "repository": "https://github.com/futurepress/epubjs-reader",
   "description": "ePub.js Reader",
   "main": "index.js",

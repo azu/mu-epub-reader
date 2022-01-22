@@ -85,6 +85,12 @@ XMLHttpRequest.prototype.open = function (...args) {
 };
 ```
 
+## Release
+
+    npm version patch
+    git push --tags && git push
+
+
 ## Related
 
 - [azu/mu-pdf-viewer: PDF viewer on electron.](https://github.com/azu/mu-pdf-viewer)

@@ -769,6 +769,11 @@ EPUBJS.Reader = function (bookPath, _options) {
         // location!!
         function setupProgressBar(rendition) {
             // https://github.com/futurepress/epub.js/issues/744#issuecomment-492300092
+            // Display the book
+            var displayed = rendition.display(window.location.hash.substr(1) || undefined);
+            displayed.then(function () {
+                console.log('rendition.currentLocation():', rendition.currentLocation());
+            });
             // Generate location and pagination
             book.ready.then(function () {
                 var stored = localStorage.getItem(book.key() + '-locations');
@@ -787,7 +792,7 @@ EPUBJS.Reader = function (bookPath, _options) {
                 var currentPage = book.locations.locationFromCfi(locations.start.cfi);
                 var totalPage = book.locations.total;
                 progressElement.value = progress;
-                // console.log(progress, currentPage, totalPage)
+                console.log(progress, currentPage, totalPage)
             });
         }
 
@@ -1724,7 +1729,7 @@ EPUBJS.reader.SidebarController = function(book) {
 
 	var changePanelTo = function(viewName) {
 		var controllerName = viewName + "Controller";
-
+		
 		if(activePanel == viewName || typeof reader[controllerName] === 'undefined' ) return;
 		reader[activePanel+ "Controller"].hide();
 		reader[controllerName].show();
@@ -1733,11 +1738,11 @@ EPUBJS.reader.SidebarController = function(book) {
 		$panels.find('.active').removeClass("active");
 		$panels.find("#show-" + viewName ).addClass("active");
 	};
-
+	
 	var getActivePanel = function() {
 		return activePanel;
 	};
-
+	
 	var show = function() {
 		reader.sidebarOpen = true;
 		reader.ReaderController.slideOut();

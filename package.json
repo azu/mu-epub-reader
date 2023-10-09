@@ -11,7 +11,6 @@
     "productName": "mu-epub-viewer",
     "appId": "info.efcl.mu-epub-viewer",
     "asar": true,
-    "npmRebuild": false,
     "files": [
       "index.js",
       "reader/**/*",
@@ -44,29 +43,29 @@
   "license": "BSD-2-Clause",
   "devDependencies": {
     "connect": "~3.7.0",
-    "electron": "^16.0.4",
-    "electron-builder": "22.14.5",
-    "express": "^4.16.3",
-    "gh-pages": "^2.1.1",
-    "grunt": "~1.0.2",
+    "electron": "^26.3.0",
+    "electron-builder": "24.6.4",
+    "express": "^4.18.2",
+    "gh-pages": "^6.0.0",
+    "grunt": "~1.6.1",
     "grunt-concat-sourcemap": "~0.4.1",
-    "grunt-contrib-concat": "~1.0.1",
-    "grunt-contrib-connect": "~1.0.2",
+    "grunt-contrib-concat": "~2.1.0",
+    "grunt-contrib-connect": "~4.0.0",
     "grunt-contrib-copy": "~1.0.0",
-    "grunt-contrib-jshint": "~1.1.0",
-    "grunt-contrib-uglify": "~3.3.0",
+    "grunt-contrib-jshint": "~3.2.0",
+    "grunt-contrib-uglify": "~5.2.2",
     "grunt-contrib-watch": "^1.1.0",
     "optimist": "~0.6.1",
-    "portfinder": "~1.0.13",
-    "rimraf": "^3.0.2"
+    "portfinder": "~1.0.32",
+    "rimraf": "^5.0.5"
   },
   "dependencies": {
     "electron-default-menu": "^1.0.2",
     "electron-window-state": "^5.0.3",
-    "epubjs": "^0.3.92",
-    "jquery": "^3.5.1",
-    "jszip": "^3.5.0",
-    "localforage": "^1.9.0",
-    "minimist": "^1.2.5"
+    "epubjs": "^0.3.93",
+    "jquery": "^3.7.1",
+    "jszip": "^3.10.1",
+    "localforage": "^1.10.0",
+    "minimist": "^1.2.8"
   }
 }
